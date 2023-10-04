@@ -1,0 +1,177 @@
+ANOTAÇÕES para JAVASCRIPT:
+
+A tag <script> e </script> são containers que se bota todos os comandos relacionados a JavaScript.
+(RECOMENDAÇÃO: Pôr essa tag antes do corpo do site terminar.)
+
+O sinal de = em JavaScript tem o mesmo significado de "receber".
+
+No JavaScript pode ser usadas três tipos de aspas: "Aspas duplas", 'Apóstrofo vulgo aspas simples' e `Crase`.
+
+Módulo A
+
+COMANDOS AULA 04
+window.alert(''): Aparece um pop-up ao topo do site com algo escrito.
+window.confirm(''): Aparece um pop-up de confirmar ou cancelar.
+window.prompt(''): Aparece um pop-up com uma caixa de texto para o cliente escrever.
+
+________
+
+
+Módulo B
+
+Os comentários feitos por // funcionam apenas dentro da tag <script>
+Comentários fora da tag <script> são feitos por <!-- e -->
+E comentários feitos na tag <style> são feitos por /**/
+
+
+VARIÁVEIS
+
+Variáveis servem para guardar dados para que eles possam ser armanezados no algorítmo.
+Os nomes que são dadas a essas variáveis são chamadas de identificadores.
+
+Essas variáveis podem começar com letras (Exemplos: a1, a2, a3), podem começar também 
+com cifrões (Exemplo: $1, $2, $3), ou também podem começar com sublinhados (Exemplos: _1, _2, _3). 
+
+-Esses nomes dadas as variáveis não podem começar com números
+
+-Pode usar letras e números;
+
+-Pode-se usar acentos e símbolos;
+
+-Não se pode pôr espaços;
+
+-Não podem ser palavras usadas nos JavaScript. (Exemplo: function, alert, var)
+
+
+
+
+
+Toda variável que recebe o valor "null", ela vai se tornar nula. 
+Portanto se já contém algum valor nessa variável, esse valor será retirado após
+ser recebida com o valor null.
+
+
+
+Dicas de variáveis:
+
+-Maiúsculas e minúsculas fazem diferença;
+
+-Escolher nomes coerentes para as variáveis;
+
+-Evitar se tornar um 'programador alfabeto' ou 'programador contador';
+
+
+
+
+Nas variáveis, caso for um número inteiro ou números reais (float) o nome da variável que foi posta,
+o JavaScript considera como o tipo 'number'. O JavaScript tambem contém o tipo 'string', que são 
+cadeias de carácteres (letras, números, símbolos), ou podem ser um conjunto de números posta no nome 
+da variável. Também há o tipo 'boolean' que possui apenas 'true' e 'false' como variável.
+
+
+
+No JavaScript possui tipos especiais desses tipos primitivos, como por exemplo: Valores internos do tipo 'number' (Infinity e NaN),
+também há os tipos null, undefined, object (que possui o tipo interno Array) e também há function.
+Para descobrir qual o tipo de tal variável, basta apenas digitar 'typeof'.
+
+
+
+
+O sinal de '+' no JavaScript tem a função de concatenação.
+
+
+
+Existe duas maneiras possíveis de converter essas variáveis para o tipo number, a primeira é usando o comando: 'Number.parseInt()', 
+que converte para números inteiros.
+A outra maneira é usando esse comando: 'Number.parseFloat()', que converte strings para números reais.
+Porém, é possível simplificar usando apenas o comando: 'Number()', que consegue identificar números inteiros e reais.
+
+A mesma coisa existe para converter variáveis para o tipo string, usando o comando: 'String()'.
+Existe também o comando: 'n.toString()', que converte específicamente numbers para strings.
+
+
+
+Há duas maneiras de demonstrar uma variável em frases. A primeira é usando a concatenação. Exemplo:
+var s = 'JavaScript'
+
+'Estou aprendendo' + s // Estou aprendendo JavaScript
+
+A segunda maneira e a que é mais utilizada, usa um placeholder para demonstrar uma variável. Exemplo:
+var s = 'JavaScript'
+
+`Estou aprendendo ${s}` // Estou aprendendo JavaScript
+
+O uso dessa maneira chamada template string só é funcional caso a frase esteja entre crases.
+
+
+
+Converter um tipo de moeda para outro tipo de moeda:
+
+var.toLocaleString('país da moeda', {style: 'currency', currency :'o tipo da moeda'})
+
+COMANDOS AULA 05
+
+var (nome da variável) = (o'quê ela recebe)
+
+
+
+OPERADORES ARITMÉTICOS
+
+No JavaScript tem os seguintes operadores:
+
+- Adição '+'
+
+- Subtração '-'
+
+- Multiplacação '*'
+
+- Divisão Real '/'
+
+- Divisão Inteira '%' (O número que sobrar fica como resultado na divisão inteira)
+
+- Potência '**' 
+
+CUIDADO!
+
+As contas armadas sempre começará por Multiplacação e Divisão.
+Para as contas começarem por adição, ou subtração, podem-se botar entre parênteses "(conta)"
+
+Ordem de Precedência:
+
+- Parênteses '()'
+- Potência '**'
+- Multiplacação, Divisão Inteira e Real '*' '/' '%' 
+- Soma e Subtração '+' '-'
+
+As ordens começam da esquerda pra direita.
+
+AUTO-ATRIBUIÇÕES
+
+É uma maneira de repôr o número que está dentro de uma variável, por exemplo:
+
+var n = 3   //A variável 'n' recebe o valor '3'
+n = n + 5   //A variável 'n' que tem o valor de '3' irá somar com '5'
+
+Agora a variável recebe o valor '8' por ter somado o '3' com '5'
+
+E tem como simplificar fazendo apenas:
+
+n += 3    //A mesma conta sendo feita de forma simplificada
+
+
+COMANDOS AULA 06
+
+Formatações de strings:
+
+.length            // Informa quantos caracteres contém na string
+
+.toUpperCase()     // Modifica todos os caracteres da string para letras maiúsculas
+
+.toLowerCase()     // Modifica todos os caracteres da string para letras minúsculas
+
+Formatações de numbers:
+
+.toFixed(#)      // Aumenta uma quantidade de casas no tipo number de uma variável
+
+.replace('', '') // Substituirá um caractere por outro no tipo number de uma variável
+
