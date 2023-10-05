@@ -1,0 +1,149 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1046{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\colortbl ;\red155\green0\blue211;\red128\green100\blue162;\red0\green176\blue80;\red192\green80\blue77;\red0\green0\blue0;\red0\green77\blue187;\red255\green0\blue0;\red116\green31\blue31;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\qc\cf1\f0\fs40\lang22 ANOTA\'c7\'d5ES para JAVASCRIPT \cf0\fs22\par
+
+\pard\sa200\sl276\slmult1 -A tag \cf2 <script> \cf0 e \cf2 </script> \cf0 s\'e3o containers que se bota todos os comandos relacionados a JavaScript. \par
+(ATEN\'c7\'c3O!: P\'f4r essa tag antes do corpo do site terminar.) \par
+-O sinal de '=' em JavaScript tem o mesmo significado de "receber". \par
+-No JavaScript pode ser usadas tr\'eas tipos de aspas: "Aspas duplas", 'Ap\'f3strofo vulgo aspas simples' e `Crase`. \par
+- O sinal de '+' no JavaScript tem a fun\'e7\'e3o de concatena\'e7\'e3o. \par
+\par
+
+\pard\sa200\sl276\slmult1\qc\fs32 M\'f3dulo A \fs22\par
+
+\pard\sa200\sl276\slmult1\fs28 COMANDOS AULA 04 \fs22\par
+\cf2 window.alert('')       \cf3 // Aparece um pop-up ao topo do site com algo escrito. \cf0\par
+\cf2 window.confirm('') \cf3 // Aparece um pop-up de confirmar ou cancelar. \cf0\par
+\cf2 window.prompt('') \cf3 // Aparece um pop-up com uma caixa de texto para o cliente escrever. \cf0\par
+\par
+
+\pard\sa200\sl276\slmult1\qc\fs32 M\'f3dulo B \fs22\par
+
+\pard\sa200\sl276\slmult1 Os coment\'e1rios feitos por \cf3 //\cf0  funcionam apenas dentro da tag \cf2 <script> \cf0\par
+Coment\'e1rios fora da tag \cf2 <script> \cf0 s\'e3o feitos por \cf3 <!--\cf0  e \cf3 --> \cf0\par
+E coment\'e1rios feitos na tag \cf2 <style> \cf0 s\'e3o feitos por \cf3 /**/ \cf0\par
+\par
+\fs28 VARI\'c1VEIS\fs22  \par
+Vari\'e1veis servem para guardar dados para que eles possam ser armazenados no algoritmo. \par
+Os nomes que s\'e3o dadas a essas vari\'e1veis s\'e3o chamadas de identificadores. \par
+Essas vari\'e1veis podem come\'e7ar com letras (Exemplos: a1, a2, a3), podem come\'e7ar tamb\'e9m  \par
+com cifr\'f5es (Exemplo: $1, $2, $3), ou tamb\'e9m podem come\'e7ar com sublinhados (Exemplos: _1, _2, _3).  \par
+\par
+\cf4 -Esses nomes dados as vari\'e1veis n\'e3o podem come\'e7ar com n\'fameros \par
+-Pode usar letras e n\'fameros; \par
+-Pode-se usar acentos e s\'edmbolos; \par
+-N\'e3o se pode p\'f4r espa\'e7os; \par
+-N\'e3o podem ser palavras usadas nos JavaScript. (Exemplo: function, alert, var) \par
+\cf0\par
+Toda vari\'e1vel que recebe o valor "null", ela vai se tornar nula.  \par
+Portanto se j\'e1 cont\'e9m algum valor nessa vari\'e1vel, esse valor ser\'e1 retirado ap\'f3s ser recebida com o valor null. \par
+\fs28 Dicas de vari\'e1veis: \fs22\par
+\cf4 -Mai\'fasculas e min\'fasculas fazem diferen\'e7a; \par
+-Escolher nomes coerentes para as vari\'e1veis; \par
+-Evitar se tornar um 'programador alfabeto' ou 'programador contador'; \par
+\cf0\par
+Nas vari\'e1veis, caso for um n\'famero inteiro ou n\'fameros reais (float) o nome da vari\'e1vel que foi posta, o JavaScript considera como o tipo 'number'. O JavaScript tamb\'e9m cont\'e9m o tipo 'string', que s\'e3o  cadeias de car\'e1cteres (letras, n\'fameros, s\'edmbolos), ou podem ser um conjunto de n\'fameros posta no nome  da vari\'e1vel. Tamb\'e9m h\'e1 o tipo 'boolean' que possui apenas 'true' e 'false' como vari\'e1vel.\par
+No JavaScript possui tipos especiais desses tipos primitivos, como por exemplo: Valores internos do tipo 'number' (Infinity e NaN), tamb\'e9m h\'e1 os tipos null, undefined, object (que possui o tipo interno Array) e tamb\'e9m h\'e1 function. Para descobrir qual o tipo de tal vari\'e1vel, basta apenas digitar 'typeof'.  \par
+Existe duas maneiras poss\'edveis de converter essas vari\'e1veis para o tipo number, a primeira \'e9 usando o comando: \cf3 '\cf2 Number.parseInt()\cf0 ',  que converte para n\'fameros inteiros. \par
+A outra maneira \'e9 usando esse comando: '\cf2 Number.parseFloat()', \cf0 que converte strings para n\'fameros reais. \par
+Por\'e9m, \'e9 poss\'edvel simplificar usando apenas o comando: '\cf2 Number()\cf0 ', que consegue identificar n\'fameros inteiros e reais. \par
+A mesma coisa existe para converter vari\'e1veis para o tipo string, usando o comando: '\cf2 String()\cf0 '. \par
+Existe tamb\'e9m o comando: \cf5 '\cf2 n.toString()\cf5 '\cf2  \cf0 , que converte especificamente numbers para strings. \par
+H\'e1 duas maneiras de demonstrar uma vari\'e1vel em frases. A primeira \'e9 usando a concatena\'e7\'e3o. Exemplo: \par
+\cf6 var s = 'JavaScript' \par
+'Estou aprendendo' + s \cf3 // Estou aprendendo JavaScript \cf0\par
+A segunda maneira e a que \'e9 mais utilizada, usa um placeholder para demonstrar uma vari\'e1vel. Exemplo: \par
+\cf6 var s = 'JavaScript' \par
+`Estou aprendendo $\{s\}` \cf3 // Estou aprendendo JavaScript \cf0\par
+O uso dessa maneira chamada template string s\'f3 \'e9 funcional caso a frase esteja entre crases. \par
+Converter um tipo de moeda para outro tipo de moeda: \par
+\cf2 var.toLocaleString('pa\'eds da moeda', \{style: 'currency', currency :'o tipo da moeda'\}) \par
+\cf5\ul\b ___________________________________________________________________________\cf2\ulnone\b0\par
+\cf0\fs30 Operadores:\par
+\fs22 Existem v\'e1rios tipos de operadores no JavaScript, mas os principais s\'e3o:\par
+\cf4 - Operadores Aritm\'e9ticos\par
+- Operadores de Atribui\'e7\'e3o\par
+- Operadores Relacionais\par
+- Operadores L\'f3gicos \par
+- Operadores Tern\'e1rios\par
+\fs30\par
+\cf0 OPERADORES ARITM\'c9TICOS \par
+\fs22 Nos operadores aritm\'e9ticos tem os seguintes operadores: \par
+\cf4 - Adi\'e7\'e3o '+' \par
+- Subtra\'e7\'e3o '-' \par
+- Multiplica\'e7\'e3o '*' \par
+- Divis\'e3o Real '/' \par
+- Divis\'e3o Inteira '%' (O n\'famero que sobrar fica como resultado na divis\'e3o inteira) \par
+- Pot\'eancia '**'  \par
+\cf0\par
+\cf7\fs24 CUIDADO! \cf0\fs22\par
+As contas armadas sempre come\'e7ar\'e3o por Multiplica\'e7\'e3o e Divis\'e3o. \par
+Para as contas come\'e7arem por adi\'e7\'e3o, ou subtra\'e7\'e3o, podem-se botar entre par\'eanteses "(conta)\rdblquote  \par
+\fs24 Ordem de Preced\'eancia: \fs22\par
+\cf4 - Par\'eanteses '()' \par
+- Pot\'eancia '**' \par
+- Multiplica\'e7\'e3o, Divis\'e3o Inteira e Real '*' '/' '%'  \par
+- Soma e Subtra\'e7\'e3o '+' '-' \par
+\cf0 (As ordens come\'e7am da esquerda pra direita.) \par
+\par
+\fs30 OPERADORES DE ATRIBUI\'c7\'c3O\fs22\par
+\'c9 uma maneira de repor o n\'famero que est\'e1 dentro de uma vari\'e1vel, por exemplo: \par
+\cf6 var n = 3   \cf3 //A vari\'e1vel 'n' recebe o valor '3' \par
+\cf6 n = n + 5   \cf3 //A vari\'e1vel 'n' que tem o valor de '3' ir\'e1 somar com '5' \par
+\cf0 Agora a vari\'e1vel recebe o valor '8' por ter somado o '3' com '5' \par
+E tem como simplificar fazendo apenas: \par
+\cf6 n += 3   \cf3 //A mesma conta sendo feita de forma simplificada \cf0\fs30\par
+COMANDOS AULA 05  \par
+\cf2\fs22 var (nome da vari\'e1vel) = (oque ela recebe) \cf0\par
+\fs30 COMANDOS AULA 06 \fs22\par
+\fs26 Formata\'e7\'f5es de strings: \fs22\par
+\cf2 .length                    \cf3 // Informa quantos caracteres cont\'e9m na string \cf0\par
+\cf2 .toUpperCase()     \cf3 // Modifica todos os caracteres da string para letras mai\'fasculas \cf0\par
+\cf2 .toLowerCase()     \cf3 // Modifica todos os caracteres da string para letras min\'fasculas \cf0\par
+\fs26 Formata\'e7\'f5es de numbers: \par
+\cf2\fs22 .toFixed(#)      \cf3 // Aumenta uma quantidade de casas no tipo number de uma vari\'e1vel \cf0\par
+\cf2 .replace('', '') \cf3 // Substituir\'e1 um caractere por outro no tipo number de uma vari\'e1vel \par
+\par
+\cf0\fs30 OPERADORES RELACIONAIS\par
+\fs22 Nos operadores relacionais tem os seguintes operadores: \par
+\cf4 - Maior '>'\par
+- Menor '<'\par
+- Maior ou igual '>='\par
+- Menor ou igual '<='\par
+- Igual (apenas nos caracteres) '=='\par
+- Igual (nos tipos e caracteres) '==='\par
+- Diferente '!='\par
+- Nega\'e7\'e3o '!'\par
+\cf5\fs26 Exemplos:\fs22\par
+\cf6 pre\'e7o >= 200.50      \cf3   // O pre\'e7o \'e9 maior ou igual a 200.50?\cf5\par
+\cf6 Idade < 18                \cf3  // A idade \'e9 menor que 18?\cf5\par
+\cf6 curso == 'JavaScript' \cf3 // O curso \'e9 JavaScript?\cf5\par
+\cf6 n1 != n2                    \cf3 // O n1 \'e9 diferente de n2?\par
+\cf8\b (IMPORTANTE!: '==' d\'e1 o resultado true apenas se tiver a mesma quantidade de caractere, j\'e1 '===' s\'f3 d\'e1 true se tiver a mesma quantidade de caractere e se tiver o mesmo tipo)\par
+\cf5\b0 Esses operadores n\'e3o possuem ordem de preced\'eancia. As ordens come\'e7am da esquerda para direita.\b\par
+\cf0\b0\fs30 OPERADORES L\'d3GICOS\par
+\fs22 Nos operadores l\'f3gicos tem os seguintes operadores: \fs30\par
+\cf4\fs22 - Nega\'e7\'e3o '!'\fs30\par
+\fs22 - Conjun\'e7\'e3o '&&'\par
+- Disjun\'e7\'e3o '||'\par
+\cf5\fs26 Explica\'e7\'e3o:\cf4\fs22\par
+\cf5 O operador '!' tem o objetivo de negar qualquer valor que seja declarado nele.\par
+O operador '&&' s\'f3 funcionar\'e1 se os valores declarados for todos true.\par
+O operador '||' s\'f3 funcionar\'e1 se um dos valores ou mais valores declarados for true, se os demais estiverem false, funcionar\'e1 mesmo assim.\par
+\fs24 Ordem de preced\'eancia:\fs22\par
+A ordem de preced\'eancia desses operadores s\'e3o:\par
+\cf4 - Nega\'e7\'e3o '!'\par
+- Conjun\'e7\'e3o '&&'\par
+- Disjun\'e7\'e3o '||'\par
+\par
+\cf0\fs30 OPERADORES TERN\'c1RIOS\par
+\fs22 Nos operadores tern\'e1rios tem os seguintes operadores: \par
+\cf4 - '?'\par
+- ':'\par
+\cf5 Esses operadores tern\'e1rios possuem esse nome pois eles possuem tr\'eas operandos:\par
+\cf6 TESTE ? TRUE : FALSE;\par
+\cf5 Exemplo:\par
+\cf6 m\'e9dia >= 7.0 ? "Aprovado" : "Reprovado" \cf3 // Se a m\'e9dia for maior ou igual a 7.0, ser\'e1 aprovado, se n\'e3o for maior ou igual a 7.0 ser\'e1 reprovado;\par
+}
+ 
