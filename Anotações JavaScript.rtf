@@ -1,5 +1,5 @@
 {\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1046{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
-{\colortbl ;\red155\green0\blue211;\red128\green100\blue162;\red0\green176\blue80;\red192\green80\blue77;\red0\green0\blue0;\red0\green77\blue187;\red255\green0\blue0;\red116\green31\blue31;}
+{\colortbl ;\red155\green0\blue211;\red128\green100\blue162;\red0\green176\blue80;\red192\green80\blue77;\red0\green0\blue0;\red0\green77\blue187;\red255\green0\blue0;\red116\green31\blue31;\red0\green64\blue128;\red100\green107\blue134;}
 {\*\generator Riched20 10.0.19041}\viewkind4\uc1 
 \pard\sa200\sl276\slmult1\qc\cf1\f0\fs40\lang22 ANOTA\'c7\'d5ES para JAVASCRIPT \cf0\fs22\par
 
@@ -145,5 +145,110 @@ A ordem de preced\'eancia desses operadores s\'e3o:\par
 \cf6 TESTE ? TRUE : FALSE;\par
 \cf5 Exemplo:\par
 \cf6 m\'e9dia >= 7.0 ? "Aprovado" : "Reprovado" \cf3 // Se a m\'e9dia for maior ou igual a 7.0, ser\'e1 aprovado, se n\'e3o for maior ou igual a 7.0 ser\'e1 reprovado;\par
+\cf0 Ordem de Preced\'eancia:\cf3\par
+\cf0 A ordem de preced\'eancia dos operadores s\'e3o:\par
+\cf4 - Operadores Aritm\'e9ticos\par
+- Operadores de Atribui\'e7\'e3o\par
+- Operadores Relacionais\par
+- Operadores L\'f3gicos\par
+- Operadores Tern\'e1rios\par
+\cf0\par
+
+\pard\sa200\sl276\slmult1\qc\fs32 M\'d3DULO C\par
+
+\pard\sa200\sl276\slmult1\cf5\b\fs28 DOM\b0\fs26\par
+\b\fs22 DOM\b0  \'e9 uma sigla para \b Document Object Model\b0 , que \'e9 basicamente um conjunto de objetos dentro do navegador que vai dar acesso aos componentes internos do website, de forma mais clara, DOM serve para acessar o documento e os documentos que cont\'e9m nele. Sendo assim ele n\'e3o funcionar\'e1 dentro de Node js, ele s\'f3 presente quando est\'e1 sendo usado JavaScript dentro do navegador.\par
+\fs26\'c1rvore DOM\fs22\par
+DOM possue uma \'e1rvore que comp\'f5e todos os elementos que cont\'e9m no documento. Exemplo:\par
+\cf9 window\cf5\par
+
+\pard\ri-1800\sa200\sl276\slmult1\tx7800\tx8760\tx8880\tx9120\tx9360\tx9720\tx9960 Tudo no JavaScript est\'e1 dentro de uma janela chamada 'window'. dentro de window, possue muitos objetos, incluindo:\par
+
+\pard\sa200\sl276\slmult1\cf9 location    document    history\cf5\fs26\par
+\fs22 location que indica a localiza\'e7\'e3o (URL, p\'e1gina atual e anterior, entre outros) do site, o objeto document indica o documento atual, e history que guarda sua ida e volta, na qual ajuda a se localizar. Dentro do document possue um objeto considerado importante, chamado:\par
+\cf9 html\cf5\par
+no objeto html possue mais objetos como:\par
+\cf9 head     body\cf5\par
+head indica o corpo do site, body indica o corpo. Dentro de head e body possuem tamb\'e9m:\par
+head:\par
+\cf9 meta   title   link   \cf5 (entre outros)\fs26\par
+\fs22 body:\par
+\cf9 h1      p     div    \cf5 (entre outros)\par
+E assim a \'e1rvore segue...\par
+\par
+Os elementos batizados de 'Child' s\'e3o elementos que ficam diretamente embaixo dos elementos acima, que s\'e3o batizados de 'Parent'.\par
+\fs28 Metodos de acesso aos elementos\par
+\fs22 S\'e3o formas de navegar pelos elementos da p\'e1gina. \'c9 poss\'edvel navegar pelos elementos do site pelas seguintes formas:\par
+\cf4 - Por Marca;\par
+- Por ID;\par
+- Por Nome;\par
+- Por Classe;\par
+- Por Selector;\par
+\par
+\cf5\fs26 Por marca\cf4\fs22\par
+\cf5 Comando: \cf2 getElementsByTagName()\cf5\par
+\'c9 poss\'edvel pegar mais de um elemento usando esse m\'e9todo, pois v\'e1rios elementos do html possuem a mesma Tag.\par
+\fs28\par
+\fs26 Por ID\par
+\fs22 Comando: \cf2 getElementById()\cf5\par
+Esse m\'e9todo pega elementos que cont\'e9m ID, \'e9 poss\'edvel pegar apenas um elemento com ele.\par
+\par
+\fs26 Por Nome\par
+\fs22 Comando: \cf2 getElementsByName()\cf5\par
+Esse m\'e9todo pega apenas elementos que cont\'e9m nome.\fs26\par
+\par
+Por Classe\par
+\fs22 Comando: \cf2 getElementsByClassName()\cf5\par
+Esse m\'e9todo pega apenas elementos que cont\'e9m classes.\fs26\par
+\par
+Por Seletor\par
+\fs22 Comando: \cf2 querySelector()\cf5          \cf3  //Pega apenas um elemento.\cf5\par
+Comando:\cf2  querySelectorAll()  \cf5  \cf3 //Pega mais de um elemento.\cf5\par
+\par
+\fs30 ANOTA\'c7\'d5ES IMPORTANTES:\fs22\par
+\cf3 *'innerHTML'  retorna  um conte\'fado em HTML\par
+'innerText' retorna um texto normal apenas, sem formata\'e7\'f5es.*\par
+\cf5\b\fs32\par
+\fs28 Eventos DOM\fs32\par
+\cf0\b0\fs22 Eventos \'e9 tudo aquilo que possa acontecer com qualquer elemento. Exemplo: Quando um cursor de Mouse se aproxima da \'e1rea de uma DIV, dispara um evento chamado 'mouseenter' (Evento que indica que o cursor entrou na area da div)\par
+Assim que o cursor entra na \'e1rea dessa DIV, ele se movimenta dentro dessa \'e1rea que aciona v\'e1rias vezes um evento chamado 'mousemove' (Evento que indica que o cursor est\'e1 se movendo dentro dessa \'e1rea da div)\par
+Ent\'e3o o cursor \'e9 pressionado dentro dessa \'e1rea da div, acionando o evento 'mousedown' (Evento que indica que o mouse est\'e1 sendo pressionando dentro da \'e1rea da div)\par
+Logo o cursor solta o bot\'e3o de pressionar, disparando o evento 'mouseup' (Evento que indica que o cursor soltou o bot\'e3o de pressionar)\par
+Ent\'e3o o cursor d\'e1 um click nessa \'e1rea da div, disparando um evento chamado 'click' (Evento que indica que o mouse clicou dentro dessa \'e1rea da div)\par
+Logo o cursor se move para fora dessa \'e1rea da div, disparando um evento chamado 'mouseout' (Evento que indica que o cursor saiu da \'e1rea da div)\par
+Existem muitos outros eventos, esses foram alguns exemplos.\par
+\par
+\fs28 Fun\'e7\'f5es\par
+\fs22 S\'e3o conjunto de c\'f3digos, linhas de c\'f3digos que v\'e3o ser executadas quando um evento ocorrer.\par
+Exemplo: 10 linhas de c\'f3digos s\'e3o postas em 1 bloco que s\'f3 v\'e3o ser ativadas se um cursor clicar nesse bloco. \par
+Para que esse bloco funcione, voc\'ea precisa p\'f4r os sinais de chaves (\cf10 '\{\}'\cf0 ) e nomear esse bloco de function antes do bloco. E geralmente se p\'f5e um nome para essa fun\'e7\'e3o, que normalmente s\'e3o eventos que v\'e3o ocorrer, logo do lado desse nome ter\'e1 os sinais de par\'eanteses. Nesses par\'eanteses, por op\'e7\'e3o, pode-se botar parametros.\par
+\par
+\fs30 ANOTA\'c7\'d5ES IMPORTANTES:\par
+\cf3\fs22 *Os eventos podem ser configurados na parte HTML ou na parte de Script*\par
+*A propriedade 'value' \'e9 usada para pegar os valores atuais de elementos como '<input>' ou '<textarea>'.*\par
+*Um bloco em JS s\'e3o representados como um par de chaves. (sinais de chaves: '\{\}')\par
+
+\pard\sa200\sl276\slmult1\qc\cf0\fs32 M\'d3DULO D\par
+
+\pard\sa200\sl276\slmult1\b\fs28 Condi\'e7\'f5es em JS:\b0\fs22\par
+Em JavaScript, as condi\'e7\'f5es s\'e3o blocos de c\'f3digo que permitem que determinadas a\'e7\'f5es sejam executadas com base em avalia\'e7\'f5es l\'f3gicas (true ou false). Elas s\'e3o frequentemente usadas para controlar o fluxo do programa e tomar decis\'f5es com base em diferentes situa\'e7\'f5es. As estruturas de controle de fluxo mais comuns para implementar condi\'e7\'f5es em JavaScript s\'e3o 'if', 'else if' e 'else'.  Exemplo: Se o cliente fazer tal coisa dentro do website, ent\'e3o quero executar o comando que estiver no bloco do 'if'. Caso ele n\'e3o fizer tal coisa dentro do website, ent\'e3o vai executar o comando que estiver no bloco do 'else'.\par
+\fs28 Tipos de Condi\'e7\'e3o\fs22\par
+Condi\'e7\'e3o Simples: Cont\'e9m apenas um bloco 'if' na estrutura. \par
+Condi\'e7\'e3o Composta: Cont\'e9m dois blocos 'if' e 'else' na estrutura.\par
+Condi\'e7\'f5es Aninhadas: Cont\'e9m Condi\'e7\'f5es dentro de condi\'e7\'f5es.\par
+Condi\'e7\'e3o M\'faltipla: Cont\'e9m tr\'eas ou mais blocos na estrutura. Nessa condi\'e7\'e3o tem uma express\'e3o chamada switch que cont\'e9m um bloco que tem vari\'e1s condi\'e7\'f5es chamadas de case. Todo final dessas condi\'e7\'f5es cases tem a obrigatoriedade de possuir um valor 'break'.\par
+\par
+\fs30 ANOTA\'c7\'d5ES IMPORTANTES:\par
+\fs22 *No c\'f3digo '\cf2 new Date()\cf0 ',\cf2  \cf0 ele pega o tempo que voc\'ea est\'e1 executando esse c\'f3digo.*\par
+\cf3 *No JavaScript, os dias da semana s\'e3o contados por n\'fameros:\par
+0 = Domingo;\par
+1 = Segunda;\par
+2 = Ter\'e7a;\par
+3 = Quarta;\par
+4 = Quinta;\par
+5 = Sexta;\par
+6 = S\'e1bado;*\par
+\par
+\cf0 As condi\'e7\'f5es que usam 'if' \'e9 mais para valores de intervalos, j\'e1 as experess\'f5es switch case \'e9 mais recomend\'e1vel para valores pontuais.\cf3\fs26\par
 }
  

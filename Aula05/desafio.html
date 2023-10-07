@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voto</title>
+</head>
+<body>
+    <h1>Coloque sua idade!</h1>
+    Sua idade: <input type="number" name="txtida" id="txtida">
+    <input type="button" value="Verificar" onclick="clicar()">
+    <div id="res"></div>
+
+    <script>
+        function clicar() {
+            var valor_idade = document.querySelector('input#txtida')
+            var txtres = document.querySelector('div#res')
+            var res = Number(valor_idade.value)
+
+            txtres.innerHTML = `<p>Sua idade é ${res}</p>`
+
+            if (res < 16) {
+                    txtres.innerHTML += `<p>Você não vota</p>`
+            } else if (res >= 16 && res < 18 || res >= 65)  {
+                  txtres.innerHTML += '<p>Seu voto é opcional</p>'
+            } else {
+                    txtres.innerHTML += '<p>Seu voto é obrigatório</p>'
+                } 
+            }
+    </script>
+</body>
+</html>
