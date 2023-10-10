@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: rgb(105, 169, 243);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            margin: 30px;
+        }
+
+        section {
+            background-color: white;
+            width: 300px;
+            padding: 10px;
+            border-radius: 7px;
+            margin: 10px;
+        }
+
+        input {
+            margin: 3px;
+            padding: 4px 10px;
+            background-color: white;
+            border-radius: 10px;
+            border-color: rgba(0, 0, 0, 0.281);
+            border-style: solid;
+        }
+
+        #botao {
+            padding: 4px 10px;
+            background-color: white;
+            border-radius: 10px;
+            border-color: rgba(0, 0, 0, 0.281);
+            border-style: solid;
+        }
+
+       p#copyright {
+        color: white;
+       } 
+
+    
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Vamos contar</h1>
+    </header>
+    <section>
+        <div>
+            <label for="inum1">Início: </label>
+            <input type="number" name="num1" id="inum1"><br>
+
+            <label for="inum2">Fim: </label>
+            <input type="number" name="num2" id="inum2"><br>
+
+            <label for="inum3">Passo: </label>
+            <input type="number" name="num3" id="inum3"><br>
+
+            <input type="button" value="Contar" onclick="contar()" id="botao">
+        </div>
+        <div id="resultado">
+            <p>Preparar a contagem...</p>
+        </div>
+    </section>
+    <footer>
+        <p id="copyright">© CursoemVideo</p>
+    </footer>
+
+    <script>
+
+        function contar() {
+         var ini = document.getElementById('inum1');
+         var fim = document.getElementById('inum2');
+         var pas = document.getElementById('inum3');
+         var res = document.getElementById('resultado');
+        
+           ini = Number(ini.value);
+           fim = Number(fim.value);
+           pas = Number(pas.value);
+
+           res.innerHTML = '';  // Limpar o conteúdo atual
+
+            pas = Math.max(1, pas);
+
+            res.innerHTML = `Contando: <br>`
+
+           for (var i = ini; i <= fim; i += pas) {
+                 res.innerHTML += `${i}👉`;
+           }
+
+           res.innerHTML += `🏁`
+        }
+    </script>
+</body>
+</html>

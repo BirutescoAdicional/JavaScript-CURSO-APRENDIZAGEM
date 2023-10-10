@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: rgb(105, 169, 243);
+        }
+
+        h1 {
+            color: white;
+        }
+
+       p#copyright {
+        color: white;
+       } 
+
+        section {
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>    
+        <h1>Título</h1>
+    </header>
+    <section>
+        <div>
+            <label for="inum">Número: </label>
+            <input type="number" name="num" id="inum"><br>
+
+            <input type="button" value="Gerar tabuáda" onclick="gerar()">
+        </div>
+        <div>
+            <textarea name="tabu" id="" cols="10" rows="10"></textarea>
+        </div>
+    </section>
+    <footer>
+        <p id="copyright">© CursoemVideo</p>
+    </footer>
+
+    <script>
+        function gerar() {
+        var num = document.getElementById('inum');
+        var dvd = 1;
+        var txt = document.getElementsByName('tabu');
+
+        var num = Number(num.value);
+        dvd = Number(dvd);
+
+    while (dvd <= 10) {
+        var res = num * dvd;
+        txt.innerHTML += `${num} x ${dvd} = ${res}<br>`;
+        dvd++;
+    }
+        }
+    </script>
+</body>
+</html>
