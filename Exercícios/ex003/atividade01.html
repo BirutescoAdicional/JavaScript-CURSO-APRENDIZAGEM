@@ -26,7 +26,7 @@
 
         section {
             background-color: white;
-            width: 300px;
+            width: 500px;
             padding: 10px;
             border-radius: 7px;
             margin: 10px;
@@ -47,6 +47,8 @@
             border-radius: 10px;
             border-color: rgba(0, 0, 0, 0.281);
             border-style: solid;
+            cursor: pointer;
+            margin: 10px;
         }
 
        p#copyright {
@@ -83,28 +85,39 @@
 
     <script>
 
-        function contar() {
-         var ini = document.getElementById('inum1');
-         var fim = document.getElementById('inum2');
-         var pas = document.getElementById('inum3');
-         var res = document.getElementById('resultado');
-        
-           ini = Number(ini.value);
-           fim = Number(fim.value);
-           pas = Number(pas.value);
+function contar() {
+    var ini = parseInt(document.getElementById('inum1').value);
+    var fim = parseInt(document.getElementById('inum2').value);
+    var pas = parseInt(document.getElementById('inum3').value);
+    var res = document.getElementById('resultado');
 
-           res.innerHTML = '';  // Limpar o conteúdo atual
+    
+    if (isNaN(ini) || isNaN(fim) || isNaN(pas)) {
+        window.alert('Preencha todos os campos com números válidos!');
+        res.innerHTML = `[ERRO] Impossível contar!`
+        return; 
+    } else {
+        if (pas === 0) {
+        window.alert('PASSO INVÁLIDO! [Considerando passo 1]');
+        pas = 1
+    }
+    }
 
-            pas = Math.max(1, pas);
+    if (ini <= fim) {
+        res.innerHTML = 'Contando: <br>';
 
-            res.innerHTML = `Contando: <br>`
-
-           for (var i = ini; i <= fim; i += pas) {
-                 res.innerHTML += `${i}👉`;
-           }
-
-           res.innerHTML += `🏁`
+        for (var i = ini; i <= fim; i += pas) {
+            res.innerHTML += `${i} 👉`;
         }
+    } else {
+        res.innerHTML = 'Contando: <br>';
+        for (var i = ini; i >= fim; i -= pas) {
+            res.innerHTML += `${i} 👉`;
+        }
+    }
+
+    res.innerHTML += '🏁';
+}
     </script>
 </body>
 </html>

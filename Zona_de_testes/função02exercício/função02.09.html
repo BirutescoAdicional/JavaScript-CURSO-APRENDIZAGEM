@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário</title>
+    <style>
+        button {
+            border-color: rgba(0, 0, 0, 0.253);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>
+            Biologia
+        </h1>
+    </header>
+    <section>
+        <p>Qual é o maior animal terrestre?</p>
+        <div>
+            <p>
+                <input type="radio" name="opcao" id="alt1"><label for="alt1" class="alternativas">Elefante Africano</label>
+            </p>
+            <p>
+                <input type="radio" name="opcao" id="alt2" class="alternativas"><label for="alt2">Girafa</label>
+            </p>
+            <p>
+                <input type="radio" name="opcao" id="alt3" class="alternativas"><label for="alt3">Rinoceronte</label>
+            </p>
+            <p>
+                <input type="radio" name="opcao" id="alt4" class="alternativas"><label for="alt4">Hipopótamo</label>
+            
+            </p>
+        </div>
+
+        <div>
+            <input type="button" value="Verificar" onclick="verificar()" id="verificar">
+        </div>
+
+        <div id="res">
+        </div>
+    </section>
+
+    <script>
+        function verificar() {
+            var alts = document.getElementsByClassName('alternativas')
+            var ver = document.getElementById('verificar')
+            var link = document.getElementById('link')
+            var res = document.getElementById('res')
+
+            for (var i = 0; i < alts.length; i++ ) {
+                if (alts[i].checked) {
+                    if (alts[i].id === 'alt1') {
+                        res.innerHTML = 'Acertou!'
+
+                        var proximaPergunta = document.createElement('button');
+                        proximaPergunta.textContent = 'Próxima pergunta'
+                        proximaPergunta.addEventListener('click', function() {
+                            window.location.href = 'função02.10.html'
+                        })
+                        document.body.appendChild(proximaPergunta)
+                        proximaPergunta.style.borderRadius = '10px';
+                        proximaPergunta.style.padding = '6px';
+                        proximaPergunta.style.margin = '6px';
+                        proximaPergunta.style.backgroundColor = 'white';
+                        proximaPergunta.style.border = 'solid';
+                        proximaPergunta.style.fontWeight = 800
+                    } else 
+                    window.location.href = 'função02-errar.html'
+                    }
+                    ver.classList.add('disabled')
+                }
+            }
+        
+    </script>
+</body>
+</html>

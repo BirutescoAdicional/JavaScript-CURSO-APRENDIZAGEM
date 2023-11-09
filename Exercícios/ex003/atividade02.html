@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tabuada</title>
     <style>
-        * {
+          * {
             margin: 0px;
             padding: 0px;
             font-family: Arial, Helvetica, sans-serif;
@@ -13,34 +13,75 @@
 
         body {
             background-color: rgb(105, 169, 243);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         h1 {
             color: white;
+            text-align: center;
+            margin: 30px;
         }
-
-       p#copyright {
-        color: white;
-       } 
 
         section {
             background-color: white;
+            width: 388px;
+            padding: 10px;
+            border-radius: 7px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
+
+        input {
+            margin: 3px;
+            padding: 4px 10px;
+            background-color: white;
+            border-radius: 10px;
+            border-color: rgba(0, 0, 0, 0.281);
+            border-style: solid;
+        }
+
+        select {
+            margin: 10px 0px 0px 0px;
+            padding: 4px 10px;
+            background-color: white;
+            border-radius: 10px;
+            border-color: rgba(0, 0, 0, 0.281);
+            border-style: solid;
+            height: 170px;
+            width: 168apx;
+            overflow: hidden;
+        }
+
+        option {
+            text-align: center;
+        }
+        
+       p#copyright {
+        color: white;
+        padding: 20px;
+        font-style: italic;
+       } 
+
     </style>
 </head>
 <body>
-    <header>    
-        <h1>Título</h1>
+    <header>
+        <h1>Tabuada</h1>
     </header>
     <section>
         <div>
             <label for="inum">Número: </label>
-            <input type="number" name="num" id="inum"><br>
-
-            <input type="button" value="Gerar tabuáda" onclick="gerar()">
+            <input type="number" name="num" id="inum">
+            
+            <input type="button" value="Gerar Tabuada" onclick="gerar()">
         </div>
         <div>
-            <textarea name="tabu" id="" cols="10" rows="10"></textarea>
+            <select name="restabu" id="irestabu" size="10">
+                <option value="">Digite um número acima</option>
+            </select>
         </div>
     </section>
     <footer>
@@ -49,18 +90,21 @@
 
     <script>
         function gerar() {
-        var num = document.getElementById('inum');
-        var dvd = 1;
-        var txt = document.getElementsByName('tabu');
+            var valor = document.getElementById('inum').value;
+            var res = document.getElementById('irestabu');
+            res.innerHTML = '';
+    
+            if (valor === '') {
+                window.alert('[ERRO] Número inválido!');
+            } else {
+                valor = Number(valor);
+    
+                for (var i = 1; i <= 10; i++) {
+                    res.innerHTML += `<option>${valor} x ${i} = ${valor*i}</option>`;
+                    res.value = `tab ${i}`
 
-        var num = Number(num.value);
-        dvd = Number(dvd);
-
-    while (dvd <= 10) {
-        var res = num * dvd;
-        txt.innerHTML += `${num} x ${dvd} = ${res}<br>`;
-        dvd++;
-    }
+                }
+            }
         }
     </script>
 </body>

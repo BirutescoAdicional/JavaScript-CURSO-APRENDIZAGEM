@@ -1,0 +1,1 @@
+var a =parseFloat(prompt('a'))

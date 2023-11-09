@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Calcular</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: rgb(236, 192, 207);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        section {
+            background-color: white;
+            width: 400px;
+            padding: 10px;
+        }
+
+        input#botao {
+            background-color: white;
+            padding: 6px;
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+        input {
+            margin: 6px;
+            background-color: white;
+            padding: 6px;
+            border: solid 2px;
+            border-radius: 10px;
+            border-color: rgba(0, 0, 0, 0.336);
+        }
+
+       input:hover {
+        border-color: rgba(0, 0, 0, 0.185);
+       }
+
+       div#res {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div>
+            <label for="inum1">Digite um número</label>
+            <input type="number" name="num1" id="inum1"> <br>
+        </div>
+        <div>
+            <label for="inum2">Digite outro número</label>
+            <input type="number" name="num2" id="inum2">
+        </div>
+        <div>
+            <input type="button" value="Multiplicar" id="botao" onclick="mult()">
+        </div>
+        <div id="res"> 
+            <p>Digite os números acima!</p>
+        </div>
+    </section>
+
+    <script>
+        function mult() {
+            var número_1 = document.getElementById('inum1').value
+            var número_2 = document.getElementById('inum2').value
+            var res = document.getElementById('res')
+
+            if (número_1 === '' || número_2 === '') {
+                window.alert(`[ERRO] Por favor, digite números válidos`)
+            } else {
+                número_1 = Number(número_1)
+                número_2 = Number(número_2)
+
+                var multiplicar = número_1 * número_2
+
+                res.innerHTML = `O resulta de ${número_1} x ${número_2} é igual a ${multiplicar}`; 
+                res.style.textAlign = "center";
+            }
+        }
+    </script>
+</body>
+</html>
