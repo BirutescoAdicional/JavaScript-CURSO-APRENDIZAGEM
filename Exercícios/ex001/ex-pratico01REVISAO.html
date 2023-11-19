@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body, html {
+            background-color: darkcyan;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            color: white;
+            text-align: center;
+            padding: 60px;
+        }
+
+        h1 {
+            font-size: 60px
+        }
+
+        section {
+            text-align: center;
+            background-color: white;
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        img {
+            width: 250px;
+            padding: 40px 0px 40px 0px;
+        }
+
+        p {
+            text-align: center;
+            padding: 20px;
+            font-size: 20px;
+        }
+
+        #texto-rodape {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <header>
+            <h1>Hora do dia</h1>
+        </header>
+    <div id="section-container">
+        <section>
+            <div>
+                <p id="texto1"></p>
+                <p id="texto2"></p>
+            </div>
+        </section>
+    </div>
+        <footer>
+            <p id="texto-rodape">
+                &copy;
+                Curso em Vídeo
+            </p>
+        </footer>
+    </div>
+
+    <script>
+       var texto1 = document.getElementById('texto1')
+       var texto2 = document.getElementById('texto2')
+       var data = new Date()
+       var hora = data.getHours()
+
+       texto1.innerHTML = `Agora são ${hora} horas.`
+       
+       if (hora >= 1 && hora < 6) {
+        texto2.innerHTML = `Boa madrugada!`
+        const imagem = document.createElement('img')
+        imagem.src = 'imagens/pexels-aron-visuals-1743165.png'
+        texto2.appendChild(imagem)
+       } else if (hora >= 6 && hora <= 12) {
+        texto2.innerHTML = `Bom dia!`
+        const imagem = document.createElement('img')
+        imagem.src = 'imagens/pexels-pat-whelen-6369229.png'
+        texto2.appendChild(imagem)
+       } else if (hora > 12 && hora <= 17) {
+        texto2.innerHTML = `Boa tarde!`
+        const imagem = document.createElement('img')
+        imagem.src = 'imagens/pexels-guillaume-hankenne-2792070.png'
+        texto2.appendChild(imagem)
+       } else if (hora >= 18) {
+        texto2.innerHTML = `Boa noite!`
+        const imagem = document.createElement('img')
+        imagem.src = 'imagens/pexels-aron-visuals-1743165.png';
+        texto2.appendChild(imagem)
+       }
+        
+    </script>
+</body>
+</html>
